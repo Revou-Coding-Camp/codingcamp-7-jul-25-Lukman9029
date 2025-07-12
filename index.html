@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
-    class="bg-white min-h-screen flex items-center justify-center text-gray-800"
+    class="bg-[#0f172a] text-white flex items-center justify-center min-h-screen"
   >
-    <div class="bg-gray-100 p-6 rounded-xl shadow-xl w-full max-w-xl">
+    <div class="bg-[#1e293b] p-6 rounded-lg shadow-2xl w-full max-w-xl">
       <h1 class="text-center text-2xl font-bold mb-4">Todo List</h1>
 
       <div class="flex flex-col md:flex-row gap-2 mb-4">
@@ -18,16 +18,16 @@
           id="todoInput"
           type="text"
           placeholder="Add a todo..."
-          class="flex-1 px-3 py-2 rounded bg-white text-gray-800"
+          class="flex-1 px-3 py-2 rounded bg-[#0f172a] text-white"
         />
         <input
           id="todoDate"
           type="date"
-          class="px-3 py-2 rounded bg-white text-gray-800"
+          class="px-3 py-2 rounded bg-[#0f172a] text-white"
         />
         <button
           onclick="addTodo()"
-          class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white shadow-xl"
+          class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-full"
         >
           +
         </button>
@@ -37,7 +37,7 @@
         <select
           id="filterStatus"
           onchange="renderTodos()"
-          class="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded text-gray-800"
+          class="px-3 py-2 rounded bg-gray-700 text-white"
         >
           <option value="all">Tampilkan Semua</option>
           <option value="completed">Sudah Beres</option>
@@ -45,24 +45,24 @@
         </select>
         <button
           onclick="deleteAll()"
-          class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded shadow-xl text-white"
+          class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded"
         >
           Delete All
         </button>
       </div>
 
-      <table class="w-full text-sm text-left">
-        <thead class="bg-gray-200 text-gray-600 text-center">
-          <tr>
-            <th class="px-2 py-1">TASK</th>
-            <th class="px-2 py-1">END DATE</th>
-            <th class="px-2 py-1">STATUS</th>
-            <th class="px-2 py-1">ACTIONS</th>
+      <table class="w-full text-sm text-center bg-gray-900 rounded-lg">
+        <thead>
+          <tr class="bg-gray-700">
+            <th class="px-3 py-2">Task</th>
+            <th class="px-3 py-2">Tanggal</th>
+            <th class="px-3 py-2">Status</th>
+            <th class="px-3 py-2">Aksi</th>
           </tr>
         </thead>
-        <tbody id="todoList" class="text-center text-gray-800">
+        <tbody id="todoList">
           <tr>
-            <td colspan="4" class="py-2 text-gray-400">No task found</td>
+            <td colspan="4" class="py-4 text-gray-500">No task found</td>
           </tr>
         </tbody>
       </table>
